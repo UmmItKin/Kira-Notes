@@ -1,15 +1,15 @@
 ---
 const lastUpdated = '1999-07-31 23:42:10 HKT';
 const tools = [
-	['deathscan.exe', 'port scanner', 'offline'],
-	['ryuk-ping.zip', 'icmp mapper', 'broken'],
-	['notebook-crack.tgz', 'hash cracker', 'fake'],
-	['eyeswap.bin', 'license patcher', 'mirror down'],
-	['kira-sniff.tar.gz', 'packet capture', 'md5 fail'],
-	['shinigami-keygen.exe', 'serial generator', 'triple-hash'],
-	['L-crypt.dll', 'encryption library', 'untested'],
-	['deathnote-rootkit.tgz', 'kernel module', 'never worked'],
-];
+	['deathscan.exe', 'port scanner', 'offline', '/dl/deathscan.exe'],
+	['ryuk-ping.zip', 'icmp mapper', 'broken', '/dl/ryuk-ping.zip'],
+	['notebook-crack.tgz', 'hash cracker', 'fake', '/dl/notebook-crack.tgz'],
+	['eyeswap.bin', 'license patcher', 'mirror down', '/dl/eyeswap.bin'],
+	['kira-sniff.tar.gz', 'packet capture', 'md5 fail', '/dl/kira-sniff.tar.gz'],
+	['shinigami-keygen.exe', 'serial generator', 'triple-hash', '/dl/shinigami-keygen.exe'],
+	['L-crypt.dll', 'encryption library', 'untested', '/dl/L-crypt.dll'],
+	['deathnote-rootkit.tgz', 'kernel module', 'never worked', '/dl/deathnote-rootkit.tgz'],
+] as const;
 const mirrors = ['hk0.dark', 'jp2.dead', 'us9.null', 'eu1.void', 'uk5.ghost'];
 const news = [
 	'new exploit pack delayed again',
@@ -64,9 +64,9 @@ const guests = ['zero_cool', 'acidburn', 'nobody', 'kira'];
 			<section id="tools" class="mt-6 border border-phosphor bg-panel/70 p-4">
 				<h2 class="mb-3 text-4xl text-amber">:: downloads</h2>
 				<ul class="space-y-2 text-2xl">
-					{tools.map(([name, desc, status]) => (
+					{tools.map(([name, desc, status, url]) => (
 						<li class="grid grid-cols-[1fr_1fr_auto] gap-3 border-b border-phosphor/30 pb-1">
-							<a href="#" class="underline decoration-dotted">{name}</a>
+							<a href={url} class="underline decoration-dotted">{name}</a>
 							<span>{desc}</span>
 							<span class="text-amber">[{status}]</span>
 						</li>

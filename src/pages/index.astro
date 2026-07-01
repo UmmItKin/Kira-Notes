@@ -70,6 +70,11 @@ const guests = ['zero_cool', 'acidburn', 'nobody', 'kira'];
 					{news.map((item) => <li>{item}</li>)}
 				</ul>
 			</section>
+			<section id="guestbook" class="mt-4 border border-phosphor bg-panel/70 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: guestbook</h2>
+				<p class="mb-2 text-2xl">last visitors:</p>
+				<p class="break-words text-2xl">{guests.join('  //  ')}</p>
+			</section>
 		</main>
 	</body>
 </html>

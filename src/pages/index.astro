@@ -39,6 +39,18 @@ const tools = [
 			<div class="mt-4 border-y border-amber py-2 text-2xl text-amber">
 				<marquee scrollamount="6">!!! no refunds /// no support /// all downloads are fake /// do not trust mirrors !!!</marquee>
 			</div>
+			<section id="tools" class="mt-6 border border-phosphor bg-panel/70 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: downloads</h2>
+				<ul class="space-y-2 text-2xl">
+					{tools.map(([name, desc, status]) => (
+						<li class="grid grid-cols-[1fr_1fr_auto] gap-3 border-b border-phosphor/30 pb-1">
+							<a href="#" class="underline decoration-dotted">{name}</a>
+							<span>{desc}</span>
+							<span class="text-amber">[{status}]</span>
+						</li>
+					))}
+				</ul>
+			</section>
 		</main>
 	</body>
 </html>

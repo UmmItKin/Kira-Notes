@@ -52,6 +52,12 @@ const mirrors = ['hk0.dark', 'jp2.dead', 'us9.null', 'eu1.void'];
 					))}
 				</ul>
 			</section>
+			<section id="mirrors" class="mt-4 border border-phosphor bg-black/40 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: mirrors</h2>
+				<div class="grid grid-cols-2 gap-2 text-2xl md:grid-cols-4">
+					{mirrors.map((mirror) => <span class="border border-phosphor/40 px-2 py-1">{mirror}</span>)}
+				</div>
+			</section>
 		</main>
 	</body>
 </html>

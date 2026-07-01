@@ -1,0 +1,17 @@
+{
+  "name": "Kira Notes",
+  "short_name": "Kira",
+  "description": "Retro hacker archive with mirrored tools and status logs.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#08110a",
+  "theme_color": "#08110a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

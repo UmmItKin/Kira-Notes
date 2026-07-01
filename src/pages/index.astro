@@ -85,6 +85,12 @@ const guests = ['zero_cool', 'acidburn', 'nobody', 'kira'];
 					{mirrors.map((mirror) => <span class="border border-phosphor/40 px-2 py-1">{mirror}</span>)}
 				</div>
 			</section>
+			<section class="mt-4 border border-phosphor bg-black/40 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: changelog</h2>
+				<ul class="list-inside list-[square] text-2xl">
+					{changelog.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
 			<section class="mt-4 border border-amber bg-black/40 p-4">
 				<h2 class="mb-3 text-4xl text-amber">:: board</h2>
 				<ul class="list-inside list-[square] text-2xl">

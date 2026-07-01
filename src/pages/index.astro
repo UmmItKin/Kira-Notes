@@ -63,6 +63,12 @@ const news = [
 					{mirrors.map((mirror) => <span class="border border-phosphor/40 px-2 py-1">{mirror}</span>)}
 				</div>
 			</section>
+			<section class="mt-4 border border-amber bg-black/40 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: board</h2>
+				<ul class="list-inside list-[square] text-2xl">
+					{news.map((item) => <li>{item}</li>)}
+				</ul>
+			</section>
 		</main>
 	</body>
 </html>

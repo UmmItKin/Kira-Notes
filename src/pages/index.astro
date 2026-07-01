@@ -12,10 +12,10 @@ const tools = [
 ] as const;
 const mirrors = ['hk0.dark', 'jp2.dead', 'us9.null', 'eu1.void', 'uk5.ghost'];
 const news = [
-	'new exploit pack delayed again',
-	'guestbook temporarily disabled after spam flood',
-	'old mirrors may return checksum mismatch',
-	'download server migrating to new host',
+	'new archive pass completed overnight',
+	'guestbook entries are being merged into the main log',
+	'legacy mirrors refreshed with current checksum index',
+	'download server now serving from the closest live node',
 ];
 const changelog = [
 	'v0.9 — added mirrors section',
@@ -28,12 +28,20 @@ const guests = ['zero_cool', 'acidburn', 'nobody', 'kira'];
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<title>Kira Notes // Retro Hacker Archive</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="author" content="kira@darknet.void" />
-		<meta name="description" content="underground hacker tools archive — kira notes — warez repository" />
+		<meta name="description" content="Kira Notes is a retro hacker archive with mirrored tools, status logs, and a read-only download index." />
+		<meta name="theme-color" content="#08110a" />
+		<meta property="og:title" content="Kira Notes" />
+		<meta property="og:description" content="Retro hacker archive with mirrored tools, status logs, and a read-only download index." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/favicon.svg" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Kira Notes" />
+		<meta name="twitter:description" content="Retro hacker archive with mirrored tools, status logs, and a read-only download index." />
 	</head>
 	<body class="min-h-screen bg-terminal text-phosphor font-terminal [background-image:radial-gradient(#39ff141a_1px,transparent_1px)] [background-size:18px_18px]">
 		<div class="pointer-events-none fixed inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent_0_2px,#39ff14_3px)]"></div>
@@ -59,8 +67,29 @@ const guests = ['zero_cool', 'acidburn', 'nobody', 'kira'];
 			</pre>
 			<p class="mt-2 text-2xl">last update: {lastUpdated}</p>
 			<div class="mt-4 border-y border-amber py-2 text-2xl text-amber">
-				<marquee scrollamount="6">!!! no refunds /// no support /// all downloads are fake /// do not trust mirrors !!!</marquee>
+				<marquee scrollamount="6">/// archive sync complete /// checksum index refreshed /// mirrors online /// verify hashes before install ///</marquee>
 			</div>
+			<section class="mt-4 border border-phosphor bg-black/60 p-4">
+				<h2 class="mb-3 text-4xl text-amber">:: archive status</h2>
+				<div class="grid gap-3 text-2xl md:grid-cols-4">
+					<div class="border border-phosphor/40 px-3 py-2">
+						<p class="text-amber">mirror sync</p>
+						<p>04:12 UTC</p>
+					</div>
+					<div class="border border-phosphor/40 px-3 py-2">
+						<p class="text-amber">checksum index</p>
+						<p>current</p>
+					</div>
+					<div class="border border-phosphor/40 px-3 py-2">
+						<p class="text-amber">release channel</p>
+						<p>stable</p>
+					</div>
+					<div class="border border-phosphor/40 px-3 py-2">
+						<p class="text-amber">access mode</p>
+						<p>read-only</p>
+					</div>
+				</div>
+			</section>
 			<section id="tools" class="mt-6 border border-phosphor bg-panel/70 p-4">
 				<h2 class="mb-3 text-4xl text-amber">:: downloads</h2>
 				<ul class="space-y-2 text-2xl">
